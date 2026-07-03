@@ -1,0 +1,10 @@
+endee
+google-genai
+python-dotenv
+pypdf
+openpyxl
+pandas
+pillow
+fastapi
+uvicorn
+python-multipart

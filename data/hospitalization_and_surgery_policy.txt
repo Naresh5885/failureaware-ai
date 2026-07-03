@@ -1,0 +1,15 @@
+# Comprehensive Surgical & Hospitalization Insurance Guidelines (2026)
+
+## Section 5: Inpatient & Outpatient Surgical Limits
+5.1 Outpatient Surgical Procedures (e.g. Cataract surgery, Knee Arthroscopy, Appendectomy): Covered at 80% after deductible, up to a maximum payout of $3,500 per procedure.
+5.2 Major Inpatient Surgery (e.g. Open Heart Surgery, Spinal Fusion, Joint Replacement): Requires pre-admission certification 72 hours prior to admission. Covered up to $25,000 lifetime benefit cap per individual member.
+5.3 Intensive Care Unit (ICU) Room Rates: Covered up to $2,500 per day for a maximum of 14 continuous days.
+
+## Section 6: Emergency Ambulance & Transportation
+6.1 Ground Ambulance Services: Covered up to $800 per emergency trip to the nearest qualified facility.
+6.2 Air Ambulance Services: Covered up to $5,000 per emergency evacuation when medically necessary and life-threatening.
+6.3 Non-emergency medical transport is strictly non-covered.
+
+## Section 7: Fraud Prevention & Audit Rules
+7.1 Multiple claim submissions for the same service date by the same provider will trigger an automatic fraud risk flag.
+7.2 Claims submitted within 30 days of initial policy enrollment are subjected to pre-existing condition audit.

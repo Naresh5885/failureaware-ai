@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  failureaware-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: failureaware_ai_app
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ENDEE_INDEX_NAME=failureaware_company_policy
+      - EMBEDDING_MODEL=gemini-embedding-001
+      - TOP_K=5
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3

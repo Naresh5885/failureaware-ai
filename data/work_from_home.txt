@@ -1,0 +1,19 @@
+Work From Home Policy
+
+The company supports flexible working arrangements through a structured work from home policy.
+
+Eligibility: Permanent employees who have completed their probation period are eligible for work from home privileges. Employees on probation are not eligible except in special medical or emergency circumstances approved by HR.
+
+WFH Days: Eligible employees may work from home up to 2 days per week. The specific days should be agreed upon with the reporting manager to ensure team coverage.
+
+Approval Process: WFH days must be planned in advance and communicated to the team. Ad hoc WFH requests must be approved by the reporting manager by 9:00 AM on the day.
+
+Core Hours: Employees working from home must be available and reachable during core hours of 10:00 AM to 5:00 PM. Attendance on video calls and Slack/Teams is mandatory.
+
+Equipment and Connectivity: Employees are responsible for ensuring a stable internet connection and a suitable working environment. The company does not provide home internet reimbursement unless the employee is in a field-designated role.
+
+Data Security: All work from home employees must follow the data security policy strictly. Use of personal devices for company work is not permitted without prior IT approval and MDM enrollment.
+
+Performance: WFH privileges may be revoked if there is a pattern of missed deliverables, unresponsiveness during core hours, or violation of data security policies.
+
+Exceptions: Certain roles that require physical presence, such as operations and facilities staff, are not eligible for WFH unless explicitly stated in their employment terms.

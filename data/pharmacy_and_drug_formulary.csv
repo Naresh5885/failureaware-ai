@@ -1,0 +1,7 @@
+Drug_Name,Category,Tier,Copay_USD,Requires_Prior_Auth,Special_Conditions
+Amoxicillin,Antibiotic,Tier 1 Generic,15,No,Fully covered for 10-day supply
+Lipitor,Cardiovascular,Tier 2 Preferred Brand,40,No,Covered for cholesterol management
+Humira,Biologic Specialty,Tier 3 Specialty,80,Yes,Requires prior authorization & clinical diagnosis documentation
+Ozempic,Metabolic,Tier 3 Specialty,80,Yes,Covered only for Type 2 Diabetes treatment; excluded for weight loss only
+Insulin Lispro,Diabetes,Tier 1 Generic,15,No,Covered up to 30-day supply per refill
+Ibuprofen 800mg,Pain Relief,Tier 1 Generic,10,No,Fully covered
