@@ -42,7 +42,9 @@ _PROCESSED_CLAIM_KEYS: Set[str] = set()
 def _get_client() -> genai.Client:
     load_dotenv(dotenv_path=_ENV_PATH, override=True)
     key = os.getenv("GEMINI_API_KEY")
-    return genai.Client(api_key=key if key and key != "your_gemini_api_key_here" else None)
+    if not key or key == "your_gemini_api_key_here":
+        key = "DUMMY_KEY_FOR_BENCHMARK"
+    return genai.Client(api_key=key)
 
 
 def _safe_call_llm(client: genai.Client, prompt: str, image_path: Optional[str] = None) -> str:
