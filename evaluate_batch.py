@@ -9,9 +9,15 @@ F1 Score, Latency, and Hallucination Rate metrics.
 
 from __future__ import annotations
 
+import os
+import sys
+
+# Set fallback dummy API key for GitHub Actions CI/CD test environments
+if not os.getenv("GEMINI_API_KEY"):
+    os.environ["GEMINI_API_KEY"] = "DUMMY_KEY_FOR_BENCHMARK"
+
 import json
 import random
-import sys
 import time
 from pathlib import Path
 from typing import Any, Dict, List
