@@ -40,28 +40,23 @@
 
 ```mermaid
 graph TD
-    classDef startNode fill:#0b0f19,stroke:#5b5bf6,stroke-width:2px,color:#ffffff,font-weight:bold;
-    classDef parserNode fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd,font-weight:bold;
-    classDef routerNode fill:#0f172a,stroke:#8b5cf6,stroke-width:2px,color:#c4b5fd,font-weight:bold;
-    classDef ragNode fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#6ee7b7,font-weight:bold;
-    classDef criticNode fill:#0f172a,stroke:#6366f1,stroke-width:2px,color:#a5b4fc,font-weight:bold;
-    classDef medNode fill:#1e1b4b,stroke:#a855f7,stroke-width:2px,color:#e9d5ff,font-weight:bold;
-    classDef fraudNode fill:#312e81,stroke:#ec4899,stroke-width:2px,color:#fbcfe8,font-weight:bold;
-    classDef finNode fill:#065f46,stroke:#14b8a6,stroke-width:2px,color:#99f6e4,font-weight:bold;
-    classDef decisionNode fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fde68a,font-weight:bold;
-    classDef expNode fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#c7d2fe,font-weight:bold;
-    classDef resultNode fill:#0f172a,stroke:#10b981,stroke-width:3px,color:#34d399,font-weight:bold;
+    classDef inputNode fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#ffffff;
+    classDef agentNode fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#ffffff;
+    classDef dbNode fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff;
+    classDef fraudNode fill:#431407,stroke:#f97316,stroke-width:2px,color:#ffffff;
+    classDef alertNode fill:#312e81,stroke:#a855f7,stroke-width:2px,color:#ffffff;
+    classDef successNode fill:#022c22,stroke:#22c55e,stroke-width:3px,color:#ffffff;
 
-    A[📄 Raw Claim / Invoice Input]:::startNode --> B[1. Parser Agent]:::parserNode
-    B --> C[2. Router Agent]:::routerNode
-    C --> D[(📚 Endee Vector DB / RAG Retrieval)]:::ragNode
-    D --> E[3. Eligibility Critic Agent]:::criticNode
-    E --> F[4. Medical Validation Agent]:::medNode
-    F --> G[5. Fraud Detection Agent]:::fraudNode
-    G --> H[6. Financial Assessment Agent]:::finNode
-    H --> I[7. Decision Agent]:::decisionNode
-    I --> J[8. Explainability Agent]:::expNode
-    J --> K[🎯 Executive AI Verdict & Audit Matrix]:::resultNode
+    A["📄 Raw Claim / Document Invoice"]:::inputNode --> B["1. Parser Agent"]:::agentNode
+    B --> C["2. Router Agent"]:::agentNode
+    C --> D[("📚 Endee Vector DB / RAG Retrieval")]:::dbNode
+    D --> E["3. Eligibility Critic Agent"]:::agentNode
+    E --> F["4. Medical Validation Agent"]:::alertNode
+    F --> G["5. Fraud Detection Agent"]:::fraudNode
+    G --> H["6. Financial Assessment Agent"]:::agentNode
+    H --> I["7. Decision Agent"]:::agentNode
+    I --> J["8. Explainability Agent"]:::agentNode
+    J --> K["🎯 Executive AI Verdict & Audit Matrix"]:::successNode
 
     linkStyle default stroke:#6366f1,stroke-width:2px;
 ```

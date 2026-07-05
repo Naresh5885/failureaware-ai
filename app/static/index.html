@@ -324,7 +324,6 @@
             setUploadTabResults(mappedList);
             if (mappedList.length > 0) setResult(mappedList[0]);
           }
-          // Stay on Upload Files tab to show the Detailed Results Table & KPIs (like Screenshot 2)
         } catch (err) {
           alert("File Verification Notice: " + err.message);
         } finally {
@@ -334,7 +333,7 @@
 
       const handleVerifyManualClaim = async () => {
         if (!claimReason.trim()) {
-          alert("Please enter a Claim Reason or Diagnosis before verifying!");
+          alert("Please enter a Claim Reason or Diagnosis before analyzing!");
           return;
         }
 
@@ -702,7 +701,7 @@
                         ) : (
                           <>
                             <span className="text-lg">✨</span>
-                            <span>VERIFY CLAIM WITH AI (8 AGENTS)</span>
+                            <span>ANALYZE CLAIM</span>
                             <span className="text-lg">➔</span>
                           </>
                         )}
@@ -1067,7 +1066,7 @@
                                   <td className="p-3.5 font-semibold">${item.claimed_amount.toFixed(2)}</td>
                                   <td className={`p-3.5 font-bold ${item.approved_amount > 0 ? "text-emerald-400" : "text-gray-400"}`}>${item.approved_amount.toFixed(2)}</td>
                                   <td className="p-3.5">
-                                    <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${item.verdict === "Approved" ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30" : item.verdict === "Rejected" ? "bg-rose-500/10 text-rose-400 border border-rose-500/30" : "bg-amber-500/10 text-amber-400 border border-amber-500/30"}`}>
+                                    <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${item.verdict === "Approved" ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30" : item.verdict === "Rejected" ? "bg-rose-500/10 text-rose-400 border border-rose-500/30" : "bg-amber-500/10 border-amber-500/30 text-amber-400 font-bold"}`}>
                                       {item.verdict}
                                     </span>
                                   </td>
