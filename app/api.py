@@ -3,7 +3,7 @@ api.py
 ------
 FastAPI Web Server Entry Point for FailureAware AI Platform.
 Exposes standard REST APIs for single claim verification, batch document upload,
-dynamic Knowledge Base document indexing, and 300-case enterprise evaluation.
+dynamic Knowledge Base document indexing, RAG Diagnostics, KB Analytics, and 300-case enterprise evaluation.
 """
 
 from __future__ import annotations
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, UploadFile, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -28,7 +28,7 @@ from app.graph import graph_pipeline
 from app.ingest import knowledge_store
 
 app = FastAPI(
-    title="FailureAware AI — Hybrid Multi-Agent Platform",
+    title="FailureAware AI — Research-Oriented Hybrid Multi-Agent Platform",
     description="Multi-Agent Insurance Verification and Fraud Prevention Suite",
     version="2.5.0"
 )
@@ -124,6 +124,32 @@ async def upload_document(file: UploadFile = File(...)):
 async def list_documents():
     docs = knowledge_store.list_documents()
     return JSONResponse({"documents": docs})
+
+
+@app.get("/api/rag-diagnostics")
+async def get_rag_diagnostics(query: str = Query("Outpatient Knee Surgery")):
+    results = knowledge_store.query(query, top_k=4)
+    return JSONResponse({
+        "query": query,
+        "top_k": len(results),
+        "retrieved_chunks": results,
+        "similarity_scores": [r["similarity"] for r in results],
+        "source_documents": list(set(r["document"] for r in results))
+    })
+
+
+@app.get("/api/kb-analytics")
+async def get_kb_analytics():
+    analytics = knowledge_store.get_kb_analytics()
+    return JSONResponse(analytics)
+
+
+@app.get("/api/evaluate/confusion-matrix-img")
+async def get_confusion_matrix_img():
+    img_path = STATIC_DIR / "confusion_matrix.png"
+    if img_path.exists():
+        return FileResponse(str(img_path))
+    raise HTTPException(status_code=404, detail="Confusion Matrix image not found.")
 
 
 @app.get("/api/evaluate/run")
