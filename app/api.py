@@ -48,7 +48,7 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 # Mount static web app UI
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 if STATIC_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+    app.mount("/static", StaticFiles(directory=str(STATIC_DIR), html=True), name="static")
 
 
 class ClaimTextRequest(BaseModel):
@@ -59,7 +59,10 @@ class ClaimTextRequest(BaseModel):
 async def read_index():
     index_file = STATIC_DIR / "index.html"
     if index_file.exists():
-        return FileResponse(str(index_file))
+        return FileResponse(str(index_file), media_type="text/html")
+    fallback = _ROOT / "app" / "static" / "index.html"
+    if fallback.exists():
+        return FileResponse(str(fallback), media_type="text/html")
     return JSONResponse({"status": "FailureAware AI API Online", "docs": "/docs"})
 
 
