@@ -1,0 +1,9 @@
+Claimant Name: Sarah Smith
+Policy ID: POL987654321
+Diagnosis / Treatment: Fever and Open Heart Bypass Surgery
+Facility: Metro Health Emergency Unit
+Claim Amount: $15000.00
+Service Date: 2026-07-01
+
+Patient Notes:
+Patient presented with mild low-grade fever (99.8 F) and was immediately admitted for urgent open-heart coronary artery bypass graft surgery.

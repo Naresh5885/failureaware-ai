@@ -1,0 +1,128 @@
+================================================================================
+          FAILUREAWARE AI — WEB DASHBOARD COPY-PASTE TESTING SHEET
+================================================================================
+This file contains ready-to-use copy-and-paste test inputs for evaluating 
+all 8 AI Agents, Dynamic Knowledge Ingestion, and Explainability on the Web UI.
+
+--------------------------------------------------------------------------------
+TEST CASE 1: STANDARD APPROVED CLAIM (OUTPATIENT KNEE SURGERY)
+--------------------------------------------------------------------------------
+• Claimant Name : David Miller
+• Claim Reason  : Outpatient Knee Surgery
+• Approval Amount: 4000
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: APPROVED
+- Approved Payout: $3,500.00 (Section 5.1 Outpatient Surgery 80% cap up to $3,500)
+- Patient Responsibility: $500.00
+- Risk Level: LOW (Shield Icon)
+
+
+--------------------------------------------------------------------------------
+TEST CASE 2: ICU ROOM STAY CLAIM (HOSPITALIZATION)
+--------------------------------------------------------------------------------
+• Claimant Name : Alex Turner
+• Claim Reason  : Intensive Care Unit (ICU) Room Stay
+• Approval Amount: 6000
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: APPROVED
+- Approved Payout: $2,500.00 (Section 5.3 ICU Daily Room Rate Cap $2,500/day)
+- Patient Responsibility: $3,500.00
+- Risk Level: LOW
+
+
+--------------------------------------------------------------------------------
+TEST CASE 3: SUSPICIOUS DIAGNOSIS MISMATCH (FLAGGED)
+--------------------------------------------------------------------------------
+• Claimant Name : Sarah Smith
+• Claim Reason  : Fever and Heart Bypass Surgery
+• Approval Amount: 15000
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: FLAGGED FOR MANUAL REVIEW
+- Medical Validation Status: ⚠️ SUSPICIOUS
+- Medical Reason: "Diagnosis 'Fever' does not clinically justify procedure 'Heart Bypass Surgery'."
+- Confidence: 88%
+
+
+--------------------------------------------------------------------------------
+TEST CASE 4: TIER 3 SPECIALTY DRUG (HUMIRA PRIOR AUTH FLAGGED)
+--------------------------------------------------------------------------------
+• Claimant Name : Rachel Green
+• Claim Reason  : Humira Specialty Prescription
+• Approval Amount: 500
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: FLAGGED FOR MANUAL REVIEW
+- Approved Payout: $80.00 (Section 3.1 Tier 3 Specialty Copay Cap)
+- Reasoning: Requires Prior Authorization and clinical diagnosis documentation.
+
+
+--------------------------------------------------------------------------------
+TEST CASE 5: ELECTIVE COSMETIC SURGERY (POLICY EXCLUSION REJECTED)
+--------------------------------------------------------------------------------
+• Claimant Name : John Doe
+• Claim Reason  : Elective Rhinoplasty Surgery
+• Approval Amount: 3500
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: REJECTED
+- Approved Payout: $0.00
+- Reasoning: Elective cosmetic procedures strictly non-covered under Section 4.3.
+
+
+--------------------------------------------------------------------------------
+TEST CASE 6: UNREGISTERED MEMBER CHECK (ELIGIBILITY REJECTED)
+--------------------------------------------------------------------------------
+• Claimant Name : Unknown Member
+• Claim Reason  : Outpatient Knee Surgery
+• Approval Amount: 2000
+• Policy ID     : POL987654321
+
+EXPECTED RESULT:
+- Verdict: REJECTED
+- Approved Payout: $0.00
+- Reasoning: "User and Patient 'Unknown Member' does not exist in the database."
+
+
+--------------------------------------------------------------------------------
+TEST CASE 7: MISSING POLICY ID CHECK (VALIDATION ERROR)
+--------------------------------------------------------------------------------
+• Claimant Name : David Miller
+• Claim Reason  : Routine Dental Checkup
+• Approval Amount: 150
+• Policy ID     : [LEAVE BLANK]
+
+EXPECTED RESULT:
+- Verdict: REJECTED
+- Reasoning: "Policy ID is required for verification. Please enter a valid Policy ID."
+
+
+================================================================================
+DYNAMIC KNOWLEDGE BASE INGESTION TEST DATA (UPLOAD TO KNOWLEDGE BASE TAB 📚)
+================================================================================
+Copy the text below into a file named 'new_oncology_policy.txt' and drop it 
+into the Knowledge Base Studio dropzone on the web dashboard:
+
+"Section 11.0 Oncology & Chemotherapy Policy Module 2026. 
+Chemotherapy infusions are 100% covered up to a maximum annual limit of $50,000.00. 
+Radiation therapy is covered at 90% up to $20,000.00 per course. 
+Immunotherapy requires prior authorization from the Medical Audit Committee."
+
+TEST AFTER INGESTION:
+• Claimant Name : Marcus Vance
+• Claim Reason  : Chemotherapy Infusion Treatment
+• Approval Amount: 12000
+• Policy ID     : POL987654321
+
+EXPECTED RESULT AFTER INGESTION:
+- Verdict: APPROVED
+- Approved Payout: $12,000.00
+- Semantic Vector Citation: Cites 'new_oncology_policy.txt' with ~95% similarity score!
+================================================================================

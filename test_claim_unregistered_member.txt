@@ -1,0 +1,9 @@
+Claimant Name: Unknown Visitor
+Policy ID: POL-999999
+Diagnosis / Treatment: Routine Dental Cleaning
+Facility: Bright Smiles Dental Clinic
+Claim Amount: $150.00
+Service Date: 2026-07-02
+
+Patient Notes:
+Walk-in patient requested annual dental hygiene cleaning. Policy ID POL-999999 provided at front desk.

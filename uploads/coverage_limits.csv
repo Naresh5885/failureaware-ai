@@ -1,0 +1,8 @@
+Category,Service_Name,Coverage_Limit_USD,Copay_USD,Requires_Prior_Auth
+Dental,Routine Cleaning,100,0,No
+Dental,Root Canal & Crown,500,50,Yes
+Vision,Prescription Glasses,200,10,No
+Emergency,ER Visit,2500,250,No
+Hospitalization,Inpatient Stay Per Day,1200,100,Yes
+Pharmacy,Generic Medication,500,15,No
+Pharmacy,Specialty Medication,2000,80,Yes

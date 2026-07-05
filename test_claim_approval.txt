@@ -1,0 +1,9 @@
+Claimant Name: David Miller
+Policy ID: POL987654321
+Diagnosis / Treatment: Outpatient Knee Surgery
+Facility: City Central Surgical Center
+Claim Amount: $3500.00
+Service Date: 2026-07-03
+
+Patient Notes:
+Patient underwent scheduled outpatient arthroscopic knee surgery following diagnostic MRI confirming meniscus tear. Procedure completed without complications.

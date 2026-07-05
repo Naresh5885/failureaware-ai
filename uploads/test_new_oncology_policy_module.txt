@@ -1,0 +1,17 @@
+===================================================================
+SECTION 12.0: ONCOLOGY CARE & CHEMOTHERAPY COVERAGE POLICY
+===================================================================
+
+12.1 Chemotherapy Infusion Coverage:
+Outpatient chemotherapy infusions are covered at 90% up to a maximum annual payout limit of $25,000.00 per policy year.
+Prior Authorization from the Oncology Medical Board is strictly required.
+
+12.2 Radiation Therapy:
+Stereotactic body radiation therapy (SBRT) is covered up to $12,000.00 per course of treatment.
+
+12.3 Specialty Oncology Formularies:
+Keytruda (Pembrolizumab): Tier 3 Specialty Drug, $100 Copay per infusion. Prior Auth Required.
+Opdivo (Nivolumab): Tier 3 Specialty Drug, $100 Copay per infusion. Prior Auth Required.
+
+12.4 Experimental Cancer Treatments:
+Unapproved clinical trials and experimental immunotherapy treatments are excluded from coverage (0% payout).
