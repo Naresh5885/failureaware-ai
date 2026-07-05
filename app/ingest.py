@@ -25,14 +25,8 @@ _UPLOADS_DIR.mkdir(exist_ok=True)
 
 # Attempt SentenceTransformer embedding if installed, else fallback to high-precision dense concept vectorizer
 HAS_SENTENCE_TRANSFORMERS = False
-try:
-    from sentence_transformers import SentenceTransformer
-    _ST_MODEL = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-    HAS_SENTENCE_TRANSFORMERS = True
-    print("[INFO] SentenceTransformer ('sentence-transformers/all-MiniLM-L6-v2') loaded successfully.")
-except Exception:
-    _ST_MODEL = None
-    print("[INFO] Using high-precision dense semantic vectorizer.")
+_ST_MODEL = None
+
 
 
 # 1. MULTI-POLICY PLAN DEFINITIONS
